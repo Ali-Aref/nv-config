@@ -1,0 +1,120 @@
+{
+  "comment": {
+    "prefix": "comment",
+    "body": ["{/* ${1:comment} */}"],
+    "description": "RN Comment"
+  },
+  "tag": {
+    "prefix": "tag",
+    "body": ["<${1} />"],
+    "description": "RN Single Tag"
+  },
+  "tags": {
+    "prefix": "tags",
+    "body": ["<${1}>${2}</$1>"],
+    "description": "RN Double Tags"
+  },
+  "text": {
+    "prefix": "text",
+    "body": ["<Text>${1:Text}</Text>"],
+    "description": "RN Text"
+  },
+  "crnc": {
+    "prefix": "crnc",
+    "body": [
+      "export default function ${1:Component} ({${2: props}}) {\n\t${3}\n}"
+    ],
+    "description": "RN Create Component"
+  },
+  "flex": {
+    "prefix": "flex",
+    "body": ["<Flex>${1}</Flex>"],
+    "description": "RN Flex"
+  },
+  "box": {
+    "prefix": "box",
+    "body": ["<Box>${1}</Box>"],
+    "description": "RN Box"
+  },
+  "center": {
+    "prefix": "center",
+    "body": ["<Center>${1}</Center>"],
+    "description": "RN Center"
+  },
+  "container": {
+    "prefix": "container",
+    "body": ["<Container>${1}</Container>"],
+    "description": "RN Container"
+  },
+  "stack": {
+    "prefix": "stack",
+    "body": ["<Stack space={${1}}>${2}</Stack>"],
+    "description": "RN Stack"
+  },
+  "hstack": {
+    "prefix": "hstack",
+    "body": ["<HStack space={${1}}>${2}</HStack>"],
+    "description": "RN HStack"
+  },
+  "vstack": {
+    "prefix": "vstack",
+    "body": ["<VStack space={${1}}>${2}</VStack>"],
+    "description": "RN VStack"
+  },
+  "zstack": {
+    "prefix": "zstack",
+    "body": ["<ZStack space={${1}}>${2}</ZStack>"],
+    "description": "RN ZStack"
+  },
+  "button": {
+    "prefix": "button",
+    "body": ["<Button>${1}</Button>"],
+    "description": "RN Button"
+  },
+  "iconButton": {
+    "prefix": "iconbutton",
+    "body": ["<IconButton icon={${1}} />"],
+    "description": "RN IconButton"
+  },
+  "pressable": {
+    "prefix": "pressable",
+    "body": ["<Pressable onPress={${1}}>${2}</pressable>"],
+    "description": "RN Pressable"
+  },
+  "checkbox": {
+    "prefix": "checkbox",
+    "body": ["<Checkbox value=", "${1}", "accessibilityLabel=", "${2}", "/>"],
+    "description": "RN Checkbox"
+  },
+  "input": {
+    "prefix": "input",
+    "body": ["<Input ${1} />"],
+    "description": "RN Input"
+  },
+  "link": {
+    "prefix": "link",
+    "body": ["<Link href={${1}} >${2}</Link>"],
+    "description": "RN Link"
+  },
+  "flatlist": {
+    "prefix": "fl",
+    "body": [
+      "<FlatList\n",
+      "\tdata={$1}\n",
+      "\trenderItem={({ item }: any)=>($2)}\n",
+      "/>"
+    ],
+    "description": "RN FlatList"
+  },
+  "translate": {
+    "prefix": "tt",
+    "body": ["{i18n.t(\"${1}\")}"],
+    "description": "RN Link"
+  },
+
+  "if __name__ == \"__main__\"": {
+    "prefix": "ifmain",
+    "body": "if __name__ == \"__main__\":\n\t${1:main()}$0",
+    "description": "create implicitly all the code at the top level using the __name__ special variable."
+  }
+}
