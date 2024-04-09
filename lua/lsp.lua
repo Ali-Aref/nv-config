@@ -11,23 +11,23 @@ end)
 local cmp = require("cmp")
 
 cmp.setup({
+	snippet = {
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end,
+	},
+	sources = {
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
+	},
 	mapping = {
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 		["<C-e>"] = cmp.mapping.abort(),
 		["<Tab>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 		["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
 	},
-	snippet = {
-		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
-		end,
-	},
 	formatting = {
 		-- fields = { "menu", "abbr", "kind" },
-	},
-	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
 	},
 })
 
