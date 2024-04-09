@@ -1,0 +1,7 @@
+{
+	"smode": {
+		"prefix": "smodel",
+		"body": "here is your simple mode",
+		"description": "simple django model"
+	}
+}
