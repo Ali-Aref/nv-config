@@ -9,6 +9,7 @@ end)
 
 -- auto complete
 local cmp = require("cmp")
+local cmp_action = require("lsp-zero").cmp_action()
 
 cmp.setup({
 	snippet = {
@@ -22,11 +23,13 @@ cmp.setup({
 	},
 	mapping = {
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
-		["<C-e>"] = cmp.mapping.abort(),
 		["<Tab>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 		["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
+		["<C-l>"] = cmp_action.luasnip_supertab(), -- mv cursor
+		["<C-h>"] = cmp_action.luasnip_shift_supertab(), -- mv cursor
+		["<C-e>"] = cmp.mapping.abort(),
 	},
-	formatting = require('lsp-zero').cmp_format({details = true})
+	formatting = require("lsp-zero").cmp_format({ details = true }),
 })
 
 -- tsserver
