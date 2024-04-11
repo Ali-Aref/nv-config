@@ -17,8 +17,8 @@ cmp.setup({
 		end,
 	},
 	sources = {
-		{ name = 'nvim_lsp' },
-		{ name = 'luasnip' },
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
 	},
 	mapping = {
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
@@ -26,9 +26,7 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 		["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
 	},
-	formatting = {
-		-- fields = { "menu", "abbr", "kind" },
-	},
+	formatting = require('lsp-zero').cmp_format({details = true})
 })
 
 -- tsserver
