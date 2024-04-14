@@ -23,6 +23,13 @@ return {
 				name = "Search",
 				-- will get the options from telescope search
 			},
+			r = {
+				name = "Rest Client",
+				r = { "<cmd>Rest run<cr>", "run restapi request" },
+				l = { "<cmd>Rest run last<cr>", "rerun last api request" },
+			},
 		}, { prefix = "<leader>" })
 	end,
 }
+
+
