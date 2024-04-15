@@ -2,6 +2,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.diagnostic.config {
+    virtual_text = false, -- Disable inline diagnostics
+    signs = true,        -- Disable diagnostic signs
+}
 
 -- vim.opt.guicursor = "" -- normal mode cursor
 
