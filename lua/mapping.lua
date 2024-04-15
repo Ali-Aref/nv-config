@@ -10,17 +10,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- kill current buffer
 vim.keymap.set("n", "<leader>x", "<cmd>bnext<CR><cmd>bd#<CR>", { desc = "Close buffer" })
--- vim.keymap.set('n', '<leader>x', function()
---     local current_buf = vim.api.nvim_get_current_buf()
---     local next_buf = vim.api.nvim_list_bufs()[current_buf + 1] or vim.api.nvim_list_bufs()[current_buf - 1]
---     if next_buf then
---         vim.api.nvim_buf_delete(current_buf, { force = true })
---         vim.api.nvim_set_current_buf(next_buf)
---     else
---         vim.api.nvim_buf_delete(current_buf, { force = true })
---         vim.api.nvim_command('enew')
---     end
--- end, { desc = "Close buffer and switch to next/previous" })
 
 -- navigate to panes
 vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move left" })
@@ -54,4 +43,3 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Files" 
 -- bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "To next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "To prev buffer" })
-
