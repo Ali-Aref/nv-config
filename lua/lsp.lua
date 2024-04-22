@@ -75,6 +75,27 @@ require("lspconfig").tsserver.setup({
 -- pyright
 require("lspconfig").pyright.setup({ capabilities = lsp_capabilities })
 
+-- tailwind
+require("lspconfig").tailwindcss.setup({
+	capabilities = lsp_capabilities,
+	cmd = { "tailwindcss-language-server", "--stdio" },
+	settings = {
+		tailwindCSS = {
+			classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+			lint = {
+				cssConflict = "warning",
+				invalidApply = "error",
+				invalidConfigPath = "error",
+				invalidScreen = "error",
+				invalidTailwindDirective = "error",
+				invalidVariant = "error",
+				recommendedVariantOrder = "warning",
+			},
+			validate = true,
+		},
+	},
+})
+
 -- vscode-langservers-extracted
 require("lspconfig").eslint.setup({ capabilities = lsp_capabilities })
 require("lspconfig").jsonls.setup({ capabilities = lsp_capabilities })
