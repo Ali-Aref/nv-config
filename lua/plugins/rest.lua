@@ -20,8 +20,8 @@ return {
 				result = {
 					split = {
 						horizontal = false,
-						in_place = false,
-						stay_in_current_window_after_split = false,
+						in_place = true,
+						stay_in_current_window_after_split = true,
 					},
 				},
 			})
