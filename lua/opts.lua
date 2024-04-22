@@ -7,6 +7,12 @@ vim.diagnostic.config {
     signs = true,        -- Disable diagnostic signs
 }
 
+-- sepll check
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+-- vim.opt.showmode = "underline"  -- Underlines misspelled words
+vim.opt.showmode = true        -- Shows a message for misspelled words
+
 -- vim.opt.guicursor = "" -- normal mode cursor
 
 vim.opt.number = true
