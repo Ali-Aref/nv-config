@@ -22,6 +22,6 @@ require("mapping")
 require("luasnip").filetype_extend("python", { "django" })
 
 -- theme
-vim.cmd("colorscheme nord")
--- vim.o.background = "dark" -- dark/light gruvbox dark mode
--- vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme nord")
+vim.o.background = "dark" -- dark/light gruvbox dark mode
+vim.cmd("colorscheme gruvbox")
