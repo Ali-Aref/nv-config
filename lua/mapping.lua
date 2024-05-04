@@ -11,6 +11,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- kill current buffer
 vim.keymap.set("n", "<leader>x", "<cmd>bnext<CR><cmd>bd#<CR>", { desc = "Close buffer" })
 
+-- toggle spell checking
+vim.keymap.set("n", "gS", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell checking" })
+
 -- navigate to panes
 vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move left" })
 vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move right" })
@@ -43,3 +46,4 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Files" 
 -- bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "To next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "To prev buffer" })
+
