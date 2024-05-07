@@ -6,6 +6,22 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		require("nvim-tree").setup({})
+		require("nvim-tree").setup({
+			view = {
+				width = 30,
+				side = "left", -- left, right
+				float = {
+					enable = true, -- floating
+					open_win_config = {
+						relative = "win",
+						border = "rounded",
+						width = 100,
+						height = 30,
+						col = math.floor((vim.o.columns - 100) / 2),
+						row = math.floor((vim.o.lines - 30) / 2),
+					},
+				},
+			},
+		})
 	end,
 }
