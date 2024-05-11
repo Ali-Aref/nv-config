@@ -8,6 +8,14 @@
 			{
 				"language": "python",
 				"path": "./django.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./extra-ts.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./extra-ts.json"
 			}
 		]
 	}
