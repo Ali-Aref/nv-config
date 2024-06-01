@@ -13,6 +13,18 @@ return {
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
 			},
+			formatter_configs = {
+				prettier = {
+					options = {
+						printWidth = 75, -- Example line length for Prettier
+					},
+				},
+				black = {
+					options = {
+						line_length = 75, -- Example line length for Black
+					},
+				},
+			},
 		})
 	end,
 }
