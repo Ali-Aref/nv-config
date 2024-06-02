@@ -31,6 +31,7 @@ vim.keymap.set("n", "<leader>k", "<cmd>resize -5<CR>", { desc = "Shrink pane hor
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
 	require("conform").format({
 		lsp_fallback = true,
+		timeout_ms = 3000, -- 3 seconds
 	})
 end, { desc = "Format your file." })
 
