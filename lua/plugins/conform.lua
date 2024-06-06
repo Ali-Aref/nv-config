@@ -16,7 +16,7 @@ return {
 			formatter_configs = {
 				prettier = {
 					options = {
-						printWidth = 75, -- Example line length for Prettier
+						printWidth = 80, -- Example line length for Prettier
 					},
 				},
 				black = {
