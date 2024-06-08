@@ -81,7 +81,7 @@ require("lspconfig").tailwindcss.setup({
 	cmd = { "tailwindcss-language-server", "--stdio" },
 	settings = {
 		tailwindCSS = {
-			classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+			classAttributes = { "class", "className", "class:list", "classList", "ngClass", "style" },
 			lint = {
 				cssConflict = "warning",
 				invalidApply = "error",
@@ -92,6 +92,12 @@ require("lspconfig").tailwindcss.setup({
 				recommendedVariantOrder = "warning",
 			},
 			validate = true,
+			experimental = {
+				classRegex = {
+					"tw`([^`]*)",
+					{ "tw.style\\(([^)]*)\\)", "'([^']*)'" },
+				},
+			},
 		},
 	},
 })
