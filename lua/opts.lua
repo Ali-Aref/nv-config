@@ -10,6 +10,7 @@ vim.diagnostic.config {
 -- sepll check
 vim.opt.spell = false
 vim.opt.spelllang = "en_us"
+
 -- vim.opt.showmode = "underline"  -- Underlines misspelled words
 vim.opt.showmode = true        -- Shows a message for misspelled words
 
