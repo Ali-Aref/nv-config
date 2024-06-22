@@ -10,7 +10,8 @@ return {
 			TEST = { icon = "󰙨", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 			PERF = { icon = "", color = "ref", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 			TODO = { icon = "", color = "info" },
-			NOTE = { icon = "", color = "hint", alt = { "INFO", "START" } },
+			NOTE = { icon = "", color = "hint", alt = { "INFO", "START" } },
+			CLEAN = { icon = "󰆳", color = "clean", alt = { "CLEANUP", "REMOVE" } },
 		},
 		colors = {
 			info = { "#25afff" },
@@ -19,6 +20,7 @@ return {
 			test = { "#D03259" },
 			ref = { "#7084c6" },
 			hint = { "#10B981" },
+			clean = { "#6b7280" },
 		},
 	},
 }
