@@ -22,6 +22,10 @@ return {
 			f = {
 				name = "Search",
 				-- will get the options from telescope search
+				g = {
+					name = "Global Search",
+					-- will get the options from mapping
+				},
 			},
 			r = {
 				name = "Rest Client",
@@ -31,5 +35,3 @@ return {
 		}, { prefix = "<leader>" })
 	end,
 }
-
-
