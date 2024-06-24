@@ -46,6 +46,8 @@ vim.keymap.set("n", "<leader>fc", builtin.colorscheme, { desc = "Choose color sc
 vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "Find LSP reference from under cursor" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find LSP document symbols" })
 vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Find LSP workspace symbols" })
+vim.keymap.set("n", "<leader>fd", function() builtin.diagnostics({ bufnr = 0 }) end, { desc = "Find diagnostics for current buffer" })
+vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "Find diagnostics for all buffers" })
 --global search and replace
 vim.keymap.set("n", "<leader>fgs", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre", })
 vim.keymap.set("n", "<leader>fgw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word", })
