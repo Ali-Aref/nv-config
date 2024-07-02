@@ -58,3 +58,11 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Files" 
 -- bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "To next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "To prev buffer" })
+
+-- quickfix
+vim.keymap.set("n", "<leader>q", ":copen<CR>", { desc = "Open quickfix" })
+vim.keymap.set("n", "<leader>Q", ":cclose<CR>", { desc = "Close quickfix" })
+
+-- mkview & loadview
+vim.keymap.set("n", "<C-m>m", ":mkview<CR>", { desc = "Make view" })
+vim.keymap.set("n", "<C-m>l", ":loadview<CR>", { desc = "Load view" })

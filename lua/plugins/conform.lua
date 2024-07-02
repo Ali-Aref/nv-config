@@ -2,8 +2,7 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
-		local configs = require("conform")
-		configs.setup({
+		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "isort", "black" },
@@ -13,18 +12,14 @@ return {
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
 			},
-			formatter_configs = {
+			formatters = {
 				prettier = {
-					options = {
-						printWidth = 80, -- Example line length for Prettier
-					},
+					command = "prettier --print-width 90 --stdin-filepath %:p",
 				},
+			},
+			formatter_configs = {
 				black = {
-					options = {
-						line_length = 75, -- Example line length for Black
-					},
+					command = "black --line-length 75 -",
 				},
 			},
 		})
-	end,
-}
