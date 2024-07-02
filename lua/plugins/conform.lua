@@ -16,8 +16,6 @@ return {
 				prettier = {
 					command = "prettier --print-width 90 --stdin-filepath %:p",
 				},
-			},
-			formatter_configs = {
 				black = {
 					command = "black --line-length 75 -",
 				},
