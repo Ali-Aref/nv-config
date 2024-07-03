@@ -17,15 +17,24 @@ return {
 			cmd = "lazygit",
 			dimensions = { height = 0.7, width = 0.7 },
 		})
+		local leftTerm = fterm:new({
+			dimensions = { height = 1, width = 0.5, x = 1, y = 1 },
+		})
+		local bottomTerm = fterm:new({
+			dimensions = { height = 0.4, width = 1, x = 0, y = 1 },
+		})
 
-		-- toggle
-		vim.keymap.set("n", "<A-i>", '<CMD>lua require("FTerm").toggle()<CR>')
-		vim.keymap.set("t", "<A-i>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+		-- floating 
+		vim.keymap.set("n", "<leader>tt", '<CMD>lua require("FTerm").toggle()<CR>', { desc = "Toggle terminal" })
+		vim.keymap.set("t", "<leader>tt", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', { desc = "Toggle terminal" })
 		-- lazygit
-		vim.keymap.set("n", "<A-g>", function() lazygit:toggle() end)
-		vim.keymap.set("t", "<A-g>", function() lazygit:toggle() end)
+		vim.keymap.set("n", "<leader>tg", function() lazygit:toggle() end, { desc = "lazygit" })
+		vim.keymap.set("t", "<leader>tg", function() lazygit:toggle() end, { desc = "Toggle lazygit" })
+		-- bottom terminal
+		vim.keymap.set("n", "<leader>tj", function() bottomTerm:toggle() end, { desc = "Toggle bottom terminal" })
+		vim.keymap.set("t", "<leader>tj", function() bottomTerm:toggle() end, { desc = "Toggle bottom terminal" })
 		-- run 
-		vim.keymap.set("n", "<leader>rf", function()
+		vim.keymap.set("n", "<leader>tr", function()
 			local buf = vim.api.nvim_buf_get_name(0)
 			local ftype = vim.filetype.match({ filename = buf })
 			local exec = runners[ftype]
