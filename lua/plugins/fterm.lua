@@ -11,11 +11,11 @@ return {
 			},
 		})
 
-		local runners = { lua = "lua", javascript = "node", python="python" }
+		local runners = { lua = "lua", javascript = "node", python="python"}
 
 		local lazygit = fterm:new({
 			cmd = "lazygit",
-			dimensions = { height = 0.7, width = 0.7 },
+			dimensions = { height = 0.9, width = 0.9 },
 		})
 		local leftTerm = fterm:new({
 			dimensions = { height = 1, width = 0.5, x = 1, y = 1 },
