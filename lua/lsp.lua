@@ -73,7 +73,21 @@ require("lspconfig").tsserver.setup({
 })
 
 -- pyright
-require("lspconfig").pyright.setup({ capabilities = lsp_capabilities })
+-- require("lspconfig").pyright.setup({ capabilities = lsp_capabilities })
+-- pylsp
+require'lspconfig'.pylsp.setup{
+	capabilities = lsp_capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
 
 -- tailwind
 require("lspconfig").tailwindcss.setup({
@@ -92,10 +106,11 @@ require("lspconfig").tailwindcss.setup({
 				recommendedVariantOrder = "warning",
 			},
 			validate = true,
+			-- for twrnc react-native
 			experimental = {
 				classRegex = {
 					"tw`([^`]*)",
-					{ "tw.style\\(([^)]*)\\)", "'([^']*)'" },
+					{ "tw.style%(([^)]*)%)", "'([^']*)'" },
 				},
 			},
 		},
