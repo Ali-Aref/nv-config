@@ -22,7 +22,9 @@ return {
 			inverse = false, -- invert background for search, diffs, statuslines and errors
 			contrast = "hard", -- can be "hard", "soft" or empty string
 			palette_overrides = {},
-			overrides = {},
+			overrides = {
+				SpellBad = { undercurl = true, sp = "#ff0000" }, -- underline miss-spelled words
+			},
 			dim_inactive = false,
 			transparent_mode = true,
 		})
