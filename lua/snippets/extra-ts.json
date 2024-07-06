@@ -4,6 +4,31 @@
 		"description": "jsx comment",
 		"body": "{/* ${1:comment} */}"
 	},
+	"Tags": {
+		"prefix": "tgg",
+		"description": "Tags for jsx",
+		"body": "<${1:tag}>${2}</$1>"
+	},
+	"Tag": {
+		"prefix": "tg",
+		"description": "Self closing tags for jsx",
+		"body": "<${1:tag} />"
+	},
+	"Text": {
+		"prefix": "text",
+		"description": "React native text",
+		"body": "<Text>$1</Text>"
+	},
+	"View": {
+		"prefix": "view",
+		"description": "React native view",
+		"body": "<View>$1</View>"
+	},
+	"tw style": {
+		"prefix": "tws",
+		"description": "TW Style",
+		"body": "style={tw`${1}`}"
+	},
 	"Docstring": {
 		"prefix": "docstr",
 		"description": "Docstring for classes or functions",
