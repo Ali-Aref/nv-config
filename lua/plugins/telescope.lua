@@ -19,6 +19,10 @@ return {
 			pickers = {
 				live_grep = { theme = "ivy" },
 				grep_string = { theme = "ivy" },
+				lsp_references = { theme = "ivy" },
+				lsp_document_symbols = { theme = "cursor" },
+				lsp_workspace_symbols = { theme = "ivy" },
+				diagnostics = { theme = "ivy" }
 			},
 			extensions = {
 				-- Your extension configuration goes here:
