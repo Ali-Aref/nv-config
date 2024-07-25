@@ -2,7 +2,10 @@
 vim.keymap.set("i", "jj", "<esc>")
 
 -- paste what you have copied
-vim.keymap.set("x", "<leader>p", '"_DP')
+vim.keymap.set("n", "<leader>p", '"_DP')
+
+-- map ; to : 
+vim.keymap.set("n", ";", ':')
 
 -- move selected block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
