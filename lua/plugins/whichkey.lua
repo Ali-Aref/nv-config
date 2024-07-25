@@ -18,20 +18,11 @@ return {
 	},
 	config = function()
 		local wk = require("which-key")
-		wk.register({
-			f = {
-				name = "Search",
-				-- will get the options from telescope search
-				g = {
-					name = "Global Search",
-					-- will get the options from mapping
-				},
-			},
-			r = {
-				name = "Rest Client",
-				r = { "<cmd>Rest run<cr>", "run restapi request" },
-				l = { "<cmd>Rest run last<cr>", "rerun last api request" },
-			},
+		wk.add({
+			{ "<leader>f", group = "Search" },
+			{ "<leader>fg", group = "Global Search" },
+			{ "<leader>rr", "<cmd>Rest run<cr>", desc = "run restapi request", mode = "n" },
+			{ "<leader>rl", "<cmd>Rest run last<cr>", desc = "rerun last api request", mode = "n" },
 		}, { prefix = "<leader>" })
 	end,
 }
