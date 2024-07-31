@@ -24,12 +24,12 @@ return {
 			palette_overrides = {},
 			overrides = {
 				SpellBad = { undercurl = true, sp = "#ff0000" }, -- underline miss-spelled words
-				-- remove borders
-				Normal = { bg = "#282828" },
-				VertSplit = { bg = "#282828", fg = "#282828" }, 
-				StatusLine = { bg = "#282828", fg = "#282828" },
-				StatusLineNC = { bg = "#282828", fg = "#282828" },
-				WinSeparator = { bg = "#282828", fg = "#282828" },
+				-- -- remove borders
+				-- Normal = { bg = "#282828" },
+				-- VertSplit = { bg = "#282828", fg = "#282828" }, 
+				-- StatusLine = { bg = "#282828", fg = "#282828" },
+				-- StatusLineNC = { bg = "#282828", fg = "#282828" },
+				-- WinSeparator = { bg = "#282828", fg = "#282828" },
 			},
 			dim_inactive = false,
 			transparent_mode = true,
