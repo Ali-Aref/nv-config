@@ -12,7 +12,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- kill current buffer
-vim.keymap.set("n", "<leader>x", "<cmd>bnext<CR><cmd>bd#<CR>", { desc = "Close buffer" })
+vim.keymap.set("n", "<leader>x", "<cmd>bprev<CR><cmd>bd#<CR>", { desc = "Close buffer" })
 
 -- toggle spell checking
 vim.keymap.set("n", "gS", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell checking" })
@@ -24,10 +24,10 @@ vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "Move up" })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Move down" })
 
 -- resize panes
-vim.keymap.set("n", "<leader>h", "<cmd>vertical resize -10<CR>", { desc = "Shrink pane vertically" })
-vim.keymap.set("n", "<leader>l", "<cmd>vertical resize +10<CR>", { desc = "Gorw pane vertically" })
-vim.keymap.set("n", "<leader>j", "<cmd>resize +5<CR>", { desc = "Grow pane horizontally" })
-vim.keymap.set("n", "<leader>k", "<cmd>resize -5<CR>", { desc = "Shrink pane horizontally" })
+vim.keymap.set("n", "<C-H>", "<cmd>vertical resize -10<CR>", { desc = "Shrink pane vertically" })
+vim.keymap.set("n", "<C-L>", "<cmd>vertical resize +10<CR>", { desc = "Gorw pane vertically" })
+vim.keymap.set("n", "<C-J>", "<cmd>resize +5<CR>", { desc = "Grow pane horizontally" })
+vim.keymap.set("n", "<C-K>", "<cmd>resize -5<CR>", { desc = "Shrink pane horizontally" })
 
 -- conform
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
@@ -61,10 +61,6 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Files" 
 -- bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "To next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "To prev buffer" })
-
--- quickfix
-vim.keymap.set("n", "<leader>q", ":copen<CR>", { desc = "Open quickfix" })
-vim.keymap.set("n", "<leader>Q", ":cclose<CR>", { desc = "Close quickfix" })
 
 -- mkview & loadview
 vim.keymap.set("n", "<C-m>m", ":mkview<CR>", { desc = "Make view" })
