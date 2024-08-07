@@ -21,8 +21,6 @@ return {
 		wk.add({
 			{ "<leader>f", group = "Search" },
 			{ "<leader>fg", group = "Global Search" },
-			{ "<leader>rr", "<cmd>Rest run<cr>", desc = "run restapi request", mode = "n" },
-			{ "<leader>rl", "<cmd>Rest run last<cr>", desc = "rerun last api request", mode = "n" },
 		}, { prefix = "<leader>" })
 	end,
 }
