@@ -5,6 +5,10 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
+				-- don't manually ignore files, so that you can find it using <leader>fa
+				-- if they are not ignored, you should install ripgrep
+				-- file_ignore_patterns = { "node_modules", "env", ".env", ".git" },
+				
 				-- Default configuration for telescope goes here:
 				-- config_key = value,
 				mappings = {
