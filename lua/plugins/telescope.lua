@@ -1,7 +1,10 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.6",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	requires = { "nvim-lua/plenary.nvim" },
+	-- dependencies = {
+	-- 	{ "nvim-telescope/telescope-colorscheme.nvim" },
+	-- },
 	config = function()
 		require("telescope").setup({
 			defaults = {
@@ -26,7 +29,8 @@ return {
 				lsp_references = { theme = "ivy" },
 				lsp_document_symbols = { theme = "cursor" },
 				lsp_workspace_symbols = { theme = "ivy" },
-				diagnostics = { theme = "ivy" }
+				diagnostics = { theme = "ivy" },
+				colorscheme = { enable_preview = true },
 			},
 			extensions = {
 				-- Your extension configuration goes here:
