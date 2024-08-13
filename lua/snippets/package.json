@@ -20,6 +20,10 @@
 			{
 				"language": "typescriptreact",
 				"path": "./extra-ts.json"
+			},
+			{
+				"language": "json",
+				"path": "./json.json"
 			}
 		]
 	}
