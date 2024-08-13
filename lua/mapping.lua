@@ -24,10 +24,10 @@ vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "Move up" })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Move down" })
 
 -- resize panes
-vim.keymap.set("n", "<C-H>", "<cmd>vertical resize -10<CR>", { desc = "Shrink pane vertically" })
-vim.keymap.set("n", "<C-L>", "<cmd>vertical resize +10<CR>", { desc = "Gorw pane vertically" })
-vim.keymap.set("n", "<C-J>", "<cmd>resize +5<CR>", { desc = "Grow pane horizontally" })
-vim.keymap.set("n", "<C-K>", "<cmd>resize -5<CR>", { desc = "Shrink pane horizontally" })
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -10<CR>", { desc = "Shrink pane vertically" })
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +10<CR>", { desc = "Gorw pane vertically" })
+vim.keymap.set("n", "<C-Down>", "<cmd>resize +5<CR>", { desc = "Grow pane horizontally" })
+vim.keymap.set("n", "<C-Up>", "<cmd>resize -5<CR>", { desc = "Shrink pane horizontally" })
 
 -- conform
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
