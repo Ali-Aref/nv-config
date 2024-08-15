@@ -24,6 +24,7 @@ return {
 				},
 			},
 			pickers = {
+				buffers = { theme = "cursor" },
 				live_grep = { theme = "ivy" },
 				grep_string = { theme = "ivy" },
 				lsp_references = { theme = "ivy" },
