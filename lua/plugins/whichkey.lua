@@ -18,9 +18,17 @@ return {
 	},
 	config = function()
 		local wk = require("which-key")
+
 		wk.add({
 			{ "<leader>f", group = "Search" },
 			{ "<leader>fg", group = "Global Search" },
+			{
+				"<leader>?",
+				function()
+					require("which-key").show({ global = false })
+				end,
+				desc = "Buffer Local Keymaps (which-key)",
+			},
 		}, { prefix = "<leader>" })
 	end,
 }
