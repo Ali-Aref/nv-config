@@ -4,8 +4,8 @@ vim.keymap.set("i", "jj", "<esc>")
 -- paste what you have copied
 vim.keymap.set("n", "<leader>p", '"_DP')
 
--- map ; to : 
-vim.keymap.set("n", ";", ':')
+-- map ; to :
+vim.keymap.set("n", ";", ":")
 
 -- move selected block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -37,6 +37,19 @@ vim.keymap.set({ "n", "v" }, "<leader>fm", function()
 	})
 end, { desc = "Format your file." })
 
+-- toggle line numbers
+vim.keymap.set("n", "<leader>n", function()
+	local number_enabled = vim.o.number
+	local relativenumber_enabled = vim.o.relativenumber
+	if number_enabled or relativenumber_enabled then
+		vim.cmd("set norelativenumber")
+		vim.cmd("set nonumber")
+	else
+		vim.cmd("set relativenumber")
+		vim.cmd("set number")
+	end
+end, { desc = "Toggle line numbers" })
+
 -- telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>fa", builtin.git_files, { desc = "Find all files" })
@@ -49,11 +62,18 @@ vim.keymap.set("n", "<leader>fc", builtin.colorscheme, { desc = "Choose color sc
 vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "Find LSP reference from under cursor" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find LSP document symbols" })
 vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Find LSP workspace symbols" })
-vim.keymap.set("n", "<leader>fd", function() builtin.diagnostics({ bufnr = 0 }) end, { desc = "Find diagnostics for current buffer" })
+vim.keymap.set("n", "<leader>fd", function()
+	builtin.diagnostics({ bufnr = 0 })
+end, { desc = "Find diagnostics for current buffer" })
 vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "Find diagnostics for all buffers" })
 --global search and replace
-vim.keymap.set("n", "<leader>fgs", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre", })
-vim.keymap.set("n", "<leader>fgw", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word", })
+vim.keymap.set("n", "<leader>fgs", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
+vim.keymap.set(
+	"n",
+	"<leader>fgw",
+	'<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
+	{ desc = "Search current word" }
+)
 
 -- nvim tree
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Files" })
