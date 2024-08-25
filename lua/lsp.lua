@@ -31,7 +31,14 @@ cmp.setup({
 		["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
 		["<C-l>"] = cmp_action.luasnip_supertab(), -- mv cursor
 		["<C-h>"] = cmp_action.luasnip_shift_supertab(), -- mv cursor
-		["<C-e>"] = cmp.mapping.abort(),
+		["<C-e>"] = cmp.mapping.abort(), -- abort auto 
+		["<C-n>"] = cmp.mapping(function() -- trigger auto complete
+			if cmp.visible() then
+				cmp.select_next_item({ behavior = "insert" })
+			else
+				cmp.complete()
+			end
+		end),
 	},
 	formatting = require("lsp-zero").cmp_format({ details = true }),
 })
