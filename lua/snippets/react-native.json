@@ -40,6 +40,24 @@
 			"/>"
 		]
 	},
+	"twcomponent": {
+		"prefix": "ctw",
+		"description": "Create RN twrnc component",
+		"body": [
+			"import tw from '@/tw'",
+			"import {Text, View} from 'react-native'",
+			"",
+			"type ${1:ComponentName} = {${2}}",
+			"",
+			"export default function $1(props: $1) {",
+			"\tconst {${3}} = props",
+			"",
+			"\treturn <View style={tw`${4}`}>",
+			"\t\t${5}",
+			"\t<View>",
+			"}"
+		]
+	},
 
 	"x": {
 		"prefix": "view",
