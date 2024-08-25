@@ -75,19 +75,19 @@ require("lspconfig").tsserver.setup({
 -- pyright
 -- require("lspconfig").pyright.setup({ capabilities = lsp_capabilities })
 -- pylsp
-require'lspconfig'.pylsp.setup{
+require("lspconfig").pylsp.setup({
 	capabilities = lsp_capabilities,
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          ignore = {'W391'},
-          maxLineLength = 100
-        }
-      }
-    }
-  }
-}
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = { "W391" },
+					maxLineLength = 100,
+				},
+			},
+		},
+	},
+})
 
 -- tailwind
 require("lspconfig").tailwindcss.setup({
@@ -118,7 +118,21 @@ require("lspconfig").tailwindcss.setup({
 })
 
 -- vscode-langservers-extracted
-require("lspconfig").eslint.setup({ capabilities = lsp_capabilities })
+-- eslint-language-server
+require("lspconfig").eslint.setup({
+	capabilities = lsp_capabilities,
+	settings = {
+		-- nodePath = "/home/ali/.config/nvm/versions/node/v20.16.0/lib/node_modules",
+		format = { enable = true },
+	},
+	on_attach = function(client, bufnr)
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = bufnr,
+			command = "EslintFixAll",
+		})
+	end,
+})
+-- require("lspconfig").eslint.setup({ capabilities = lsp_capabilities })
 require("lspconfig").jsonls.setup({ capabilities = lsp_capabilities })
 require("lspconfig").cssls.setup({ capabilities = lsp_capabilities })
 require("lspconfig").html.setup({ capabilities = lsp_capabilities })
