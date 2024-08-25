@@ -32,8 +32,8 @@ vim.keymap.set("n", "<C-Up>", "<cmd>resize -5<CR>", { desc = "Shrink pane horizo
 -- conform
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
 	require("conform").format({
-		lsp_fallback = true,
-		timeout_ms = 3000, -- 3 seconds
+		lsp_fallback = false,
+		timeout_ms = 5000, -- 3 seconds
 	})
 end, { desc = "Format your file." })
 
@@ -83,5 +83,5 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "To next buffe
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "To prev buffer" })
 
 -- mkview & loadview
-vim.keymap.set("n", "<C-m>m", ":mkview<CR>", { desc = "Make view" })
-vim.keymap.set("n", "<C-m>l", ":loadview<CR>", { desc = "Load view" })
+-- vim.keymap.set("n", "<C-m>m", ":mkview<CR>", { desc = "Make view" })
+-- vim.keymap.set("n", "<C-m>l", ":loadview<CR>", { desc = "Load view" })
