@@ -11,6 +11,13 @@ return {
 			red = "#ff5189",
 			violet = "#D7E4C0",
 			grey = "#303030",
+			-- blue = "#81A1C1", -- Nord9
+			-- cyan = "#88C0D0", -- Nord8
+			-- black = "#2E3440", -- Nord0
+			-- white = "#D8DEE9", -- Nord4
+			-- red = "#BF616A", -- Nord11
+			-- violet = "#B48EAD", -- Nord15
+			-- grey = "#3B4252", -- Nord1
 		}
 
 		local bubbles_theme = {
