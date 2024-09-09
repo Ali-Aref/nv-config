@@ -15,7 +15,7 @@ vim.opt.spelllang = "en_us"
 vim.opt.showmode = true -- Shows a message for misspelled words
 
 -- vim.opt.guicursor = "" -- normal mode cursor
-vim.opt.cursorline = true -- highlight the current line
+vim.opt.cursorline = false -- highlight the current line
 
 vim.opt.number = true
 vim.opt.relativenumber = true
