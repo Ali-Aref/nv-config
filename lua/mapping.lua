@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>p", '"_DP')
 vim.keymap.set("n", ";", ":")
 
 -- map noh to esc
-vim.keymap.set("n": "<esc>", "<cmd>:noh<CR>")
+vim.keymap.set("n", "<esc>", "<cmd>:noh<CR>")
 
 -- move selected block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
