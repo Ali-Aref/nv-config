@@ -22,7 +22,13 @@ return {
 				},
 				black = {
 					prepend_args = { "--line-length", "75" },
-				}
+				},
+				-- eslint = {
+				-- 	exe = "eslint",  -- Path to ESLint executable
+				-- 	args = { "--fix" },  -- Arguments to pass to ESLint
+				-- 	cwd = function(params) return params.root  -- Set working directory to the project root
+				-- 	end,
+				-- }
 			},
 		})
 	end,
