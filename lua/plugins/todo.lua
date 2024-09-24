@@ -12,7 +12,7 @@ return {
 			TODO = { icon = "", color = "info" },
 			NOTE = { icon = "", color = "hint", alt = { "INFO", "START" } },
 			CLEAN = { icon = "󰆳", color = "clean", alt = { "CLEANUP", "REMOVE" } },
-			API = { icon = " ", color = "test", alt = { "BACKEN", "SERVER" } },
+			API = { icon = " ", color = "test", alt = { "BACKEND", "SERVER" } },
 		},
 		colors = {
 			info = { "#25afff" },
