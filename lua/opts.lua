@@ -7,6 +7,10 @@ vim.diagnostic.config {
     signs = true,        -- Disable diagnostic signs
 }
 
+-- vertical split
+local splitright = vim.opt.splitright
+vim.opt.fillchars:append('vert: ')
+
 -- sepll check
 vim.opt.spell = false
 vim.opt.spelllang = "en_us"
