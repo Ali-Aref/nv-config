@@ -66,10 +66,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- for lanugage server check
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
--- tsserver
-require("lspconfig").tsserver.setup({
+-- ts_ls
+require("lspconfig").ts_ls.setup({
 	capabilities = lsp_capabilities,
 	filetypes = {
 		"javascript",
