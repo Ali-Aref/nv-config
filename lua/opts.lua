@@ -8,8 +8,9 @@ vim.diagnostic.config {
 }
 
 -- vertical split
-local splitright = vim.opt.splitright
-vim.opt.fillchars:append('vert: ')
+-- local splitright = vim.opt.splitright
+-- vim.opt.fillchars:append('vert: ')
+-- vim.opt.fillchars = { vert = ' ' }
 
 -- sepll check
 vim.opt.spell = false
