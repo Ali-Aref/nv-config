@@ -1,0 +1,30 @@
+{
+	"name": "neo-snippets",
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "python",
+				"path": "./django.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./react-native.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./extra-ts.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./extra-ts.json"
+			},
+			{
+				"language": "json",
+				"path": "./json.json"
+			}
+		]
+	}
+}
