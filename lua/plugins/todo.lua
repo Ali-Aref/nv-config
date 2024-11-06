@@ -24,4 +24,9 @@ return {
 			clean = { "#6b7280" },
 		},
 	},
+	config = function()
+		-- todo quick fix
+		require("todo-comments").setup()
+		vim.keymap.set("n", "<leader>qf", "<cmd>TodoQuickFix<CR>", { desc = "Toggle todo quick fix" })
+	end,
 }

@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 		vim.keymap.set("n", "<leader>ra", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+		vim.keymap.set({ "n", "x" }, "<leader>fM", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
 		vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 		vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
 		vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
@@ -31,4 +31,37 @@ lspconfig.lua_ls.setup({
 -- tsserver
 lspconfig.ts_ls.setup({
 	capabilities = capabilities,
+})
+
+-- eslint-ls
+lspconfig.eslint.setup({
+	capabilities = capabilities,
+})
+
+-- tailwindcss
+lspconfig.tailwindcss.setup({
+	capabilities = capabilities,
+	settings = {
+		tailwindCSS = {
+			classAttributes = { "class", "className", "class:list", "classList", "ngClass", "style" },
+			lint = {
+				cssConflict = "warning",
+				invalidApply = "error",
+				invalidConfigPath = "error",
+				invalidScreen = "error",
+				invalidTailwindDirective = "error",
+				invalidVariant = "error",
+				recommendedVariantOrder = "warning",
+			},
+			validate = true,
+			-- for twrnc react-native
+			experimental = {
+				classRegex = {
+					"tw`([^`]*)",
+					{ "tw.style%(([^)]*)%)", "'([^']*)'" },
+				},
+			},
+		},
+	},
+
 })

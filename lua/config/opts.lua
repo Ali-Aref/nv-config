@@ -41,3 +41,8 @@ vim.diagnostic.config {
 		},
 }
 
+
+
+-- vertical split
+vim.opt.fillchars:append('vert: ')
+vim.opt.fillchars = { vert = ' ' }
