@@ -65,3 +65,8 @@ lspconfig.tailwindcss.setup({
 	},
 
 })
+
+-- pylsp
+lspconfig.pylsp.setup({
+	capabilities = capabilities,
+})
