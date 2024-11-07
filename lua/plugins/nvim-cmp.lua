@@ -8,6 +8,12 @@ return {
 			"rafamadriz/friendly-snippets",
 			"saadparwaiz1/cmp_luasnip", -- to make friendly snippt work with luaSnip
 		},
+		config = function()
+			local luaSnip = require("luasnip")
+			-- mover cursor the next and pervious position
+			vim.keymap.set({ "i", "s" }, "<C-L>", function() luaSnip.jump(1) end, { silent = true })
+			vim.keymap.set({ "i", "s" }, "<C-J>", function() luaSnip.jump(-1) end, { silent = true })
+		end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -56,7 +62,7 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 					["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
-					["<C-e>"] = cmp.mapping.abort(),
+					["<C-x>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 					["<C-u>"] = cmp.mapping.scroll_docs(-4),
 					["<C-d>"] = cmp.mapping.scroll_docs(4),
@@ -78,6 +84,8 @@ return {
 			require("luasnip.loaders.from_vscode").lazy_load({
 				paths = { "~/.config/nvim/snippets/" },
 			})
+			-- add django to python
+			require("luasnip").filetype_extend("python", { "django" })
 		end,
 	},
 }
