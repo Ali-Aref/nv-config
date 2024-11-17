@@ -1,6 +1,6 @@
 -- jj to esc
 vim.keymap.set("i", "jj", "<esc>")
-vim.keymap.set("t", 'jj', [[<C-\><C-n>]], { noremap = true, silent = true })
+-- vim.keymap.set("t", 'jj', [[<C-\><C-n>]], { noremap = true, silent = true })
 
 -- map noh to esc
 vim.keymap.set("n", "<esc>", "<cmd>:noh<CR>")
