@@ -11,6 +11,10 @@ vim.keymap.set("n", "<leader>x", "<cmd>bprev<CR><cmd>bd#<CR>", { desc = "Close b
 -- toggle spell checking
 vim.keymap.set("n", "gS", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell checking" })
 
+-- -- navigate to next/pervious
+-- vim.keymap.set("n", "<Tab>", "<C-w><C-w>", { desc = "Move left" })
+-- vim.keymap.set("n", "<S-Tab>", "<C-w><C-W>", { desc = "Move left" })
+
 -- navigate to panes
 vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move left" })
 vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move right" })
@@ -23,6 +27,9 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +10<CR>", { desc = "Gorw 
 vim.keymap.set("n", "<C-Down>", "<cmd>resize +5<CR>", { desc = "Grow pane horizontally" })
 vim.keymap.set("n", "<C-Up>", "<cmd>resize -5<CR>", { desc = "Shrink pane horizontally" })
 
+-- bufferline
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>", { desc = "Switch to next buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<CR>", { desc = "Switch to previous buffer" })
 
 -- toggle line numbers
 vim.keymap.set("n", "<leader>n", function()
