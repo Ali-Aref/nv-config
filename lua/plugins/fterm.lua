@@ -21,10 +21,16 @@ return {
 		local bottomTerm = fterm:new({
 			dimensions = { height = 0.4, width = 1, x = 0, y = 1 },
 		})
+		local lgTerm = fterm:new({
+			dimensions = { height = 0.8, width = 0.8 },
+		})
 
 		-- floating
 		vim.keymap.set("n", "<A-i>", '<CMD>lua require("FTerm").toggle()<CR>', { desc = "Toggle terminal" })
 		vim.keymap.set("t", "<A-i>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', { desc = "Toggle terminal" })
+		-- lgTerm
+		vim.keymap.set("n", "<A-I>", function() lgTerm:toggle() end, { desc = "Toggle terminal" })
+		vim.keymap.set("t", "<A-I>", function() lgTerm:toggle() end, { desc = "Toggle terminal" })
 		-- lazygit
 		vim.keymap.set("n", "<A-g>", function() lazygit:toggle() end, { desc = "lazygit" })
 		vim.keymap.set("t", "<A-g>", function() lazygit:toggle() end, { desc = "Toggle lazygit" })
