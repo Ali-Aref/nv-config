@@ -2,7 +2,7 @@
 vim.opt.clipboard = "unnamedplus"
 
 -- wrap
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.termguicolors = true
 
 -- tabs

@@ -38,6 +38,11 @@ lspconfig.eslint.setup({
 	capabilities = capabilities,
 })
 
+-- jsonls
+lspconfig.jsonls.setup({
+	capabilities = capabilities,
+})
+
 -- tailwindcss
 lspconfig.tailwindcss.setup({
 	capabilities = capabilities,
