@@ -2,6 +2,10 @@
 vim.keymap.set("i", "jj", "<esc>")
 -- vim.keymap.set("t", 'jj', [[<C-\><C-n>]], { noremap = true, silent = true })
 
+-- navigation when in normal mode with wrap lines
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, desc = "Move down" })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, desc = "Move up" })
+
 -- map noh to esc
 vim.keymap.set("n", "<esc>", "<cmd>:noh<CR>")
 
