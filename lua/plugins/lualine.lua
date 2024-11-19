@@ -21,6 +21,19 @@ return {
 			return count
 		end
 
+		local function lsp_status()
+			local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+			if #clients == 0 then
+				return "No LSP"
+			end
+			local client_names = {}
+			for _, client in ipairs(clients) do
+				table.insert(client_names, client.name)
+			end
+			return table.concat(client_names, ", ")
+		end
+
+
 		require("lualine").setup({
 			options = {
 				theme = custom_theme,
@@ -30,9 +43,7 @@ return {
 				component_separators = { left = "", right = "" },
 				globalstatus = true,
 				disabled_filetypes = { statusline = { "dashboard", "alpha", "starter", "snacks_dashboard" } },
-				refresh = {
-					statusline = 300,
-				},
+				refresh = { statusline = 300 },
 				ignore_focus = excluded_filetypes,
 			},
 			sections = {
@@ -40,21 +51,7 @@ return {
 				lualine_b = { "diff", "diagnostics" },
 				lualine_c = { "filename" },
 				lualine_x = {
-					{
-						function()
-							local clients = vim.lsp.get_active_clients({ bufnr = 0 })
-							if #clients == 0 then
-								return "No LSP"
-							end
-							local client_names = {}
-							for _, client in ipairs(clients) do
-								table.insert(client_names, client.name)
-							end
-							return table.concat(client_names, ", ")
-						end,
-						icon = "󱐋",
-						-- color = { fg = "cyan", bg = nil },
-					},
+					{ lsp_status, icon = "󱐋" },
 					"filetype",
 				},
 				lualine_y = { "progress" },
