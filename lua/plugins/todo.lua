@@ -28,5 +28,10 @@ return {
 		-- todo quick fix
 		require("todo-comments").setup()
 		vim.keymap.set("n", "<leader>qf", "<cmd>TodoQuickFix<CR>", { desc = "Toggle todo quick fix" })
+		vim.keymap.set(
+			"n",
+			"<leader>ft", "<cmd>TodoTelescope theme=ivy initial_mode=insert previewer=true layout_config={bottom_pane={height=12}}<CR>",
+			{ desc = "Find Todos" }
+		)
 	end,
 }

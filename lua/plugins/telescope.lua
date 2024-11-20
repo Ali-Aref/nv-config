@@ -25,7 +25,12 @@ return {
 					buffers = { theme = "cursor" },
 					live_grep = { theme = "ivy" },
 					grep_string = { theme = "ivy" },
-					lsp_references = { theme = "ivy" },
+					lsp_references = {
+						theme = "dropdown",
+						layout_config = {
+							width = 0.8,
+						},
+					},
 					lsp_document_symbols = { theme = "cursor" },
 					lsp_workspace_symbols = { theme = "ivy" },
 					diagnostics = { theme = "ivy" },

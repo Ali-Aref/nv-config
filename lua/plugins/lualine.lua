@@ -2,7 +2,8 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local excluded_filetypes = { "NvimTree", "TelescopePrompt", "spectre_panel", "FTerm" }
+		local excluded_filetypes = {}
+		-- local excluded_filetypes = { "NvimTree", "TelescopePrompt", "spectre_panel", "FTerm" }
 		local custom_theme = require("lualine.themes.gruvbox")
 		custom_theme.normal.c.bg = nil
 		custom_theme.insert.c.bg = nil
