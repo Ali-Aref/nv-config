@@ -46,3 +46,12 @@ vim.diagnostic.config {
 -- vertical split
 vim.opt.fillchars:append('vert: ')
 vim.opt.fillchars = { vert = ' ' }
+
+-- shift+k border
+local orig_open_floating_preview = vim.lsp.util.open_floating_preview
+vim.lsp.util.open_floating_preview = function(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = "rounded" -- Options: "single", "double", "rounded", "solid", "shadow"
+  return orig_open_floating_preview(contents, syntax, opts, ...)
+end
+
