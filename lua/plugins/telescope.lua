@@ -22,7 +22,14 @@ return {
 					},
 				},
 				pickers = {
-					buffers = { theme = "cursor" },
+					buffers = {
+						theme = "cursor",
+						previewer = false,
+						layout_config = {
+							width = 0.5,
+							preview_width = 0.3
+						},
+					},
 					live_grep = { theme = "ivy" },
 					grep_string = { theme = "ivy" },
 					lsp_references = {
