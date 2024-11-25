@@ -22,7 +22,7 @@ return {
 				invert_tabline = false,
 				invert_intend_guides = false,
 				inverse = false, -- invert background for search, diffs, statuslines and errors
-				contrast = "hard", -- can be "hard", "soft" or empty string
+				contrast = "soft", -- can be "hard", "soft" or empty string
 				palette_overrides = {},
 				overrides = {
 					SpellBad = { undercurl = true, sp = "#ff0000" }, -- underline miss-spelled words
@@ -50,7 +50,7 @@ return {
 					light = "latte",
 					dark = "mocha",
 				},
-				transparent_background = true, -- disables setting the background color.
+				transparent_background = false, -- disables setting the background color.
 				show_end_of_buffer = true, -- shows the '~' characters after the end of buffers
 				term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
 				dim_inactive = {
@@ -89,7 +89,7 @@ return {
 				integrations = {
 					cmp = true,
 					gitsigns = true,
-					nvimtree = true,
+					nvimtree = false,
 					treesitter = true,
 					notify = false,
 					mini = {
@@ -102,8 +102,5 @@ return {
 			-- setup must be called before loading
 			vim.cmd.colorscheme("catppuccin")
 		end,
-	},
-	{
-		"arturgoms/moonbow.nvim",
 	},
 }

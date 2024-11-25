@@ -4,12 +4,12 @@ return {
 	config = function()
 		local excluded_filetypes = {}
 		-- local excluded_filetypes = { "NvimTree", "TelescopePrompt", "spectre_panel", "FTerm" }
-		local custom_theme = require("lualine.themes.gruvbox")
+		local custom_theme = require("lualine.themes.catppuccin")
 		custom_theme.normal.c.bg = nil
-		custom_theme.insert.c.bg = nil
-		custom_theme.visual.c.bg = nil
-		custom_theme.replace.c.bg = nil
-		custom_theme.command.c.bg = nil
+		-- custom_theme.insert.c.bg = nil
+		-- custom_theme.visual.c.bg = nil
+		-- custom_theme.replace.c.bg = nil
+		-- custom_theme.command.c.bg = nil
 
 		local function buffer_count()
 			local buffers = vim.api.nvim_list_bufs()
@@ -38,6 +38,7 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = custom_theme,
+				-- theme = "catppuccin",
 				--        
 				section_separators = { left = "", right = "" },
 				-- │ ┊      
