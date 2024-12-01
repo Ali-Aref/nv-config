@@ -36,6 +36,13 @@ lspconfig.ts_ls.setup({
 -- eslint-ls
 lspconfig.eslint.setup({
 	capabilities = capabilities,
+	root_dir = lspconfig.util.root_pattern(
+		".eslintrc", -- ESLint config file
+		".eslintrc.json", -- JSON ESLint config
+		".eslintrc.js", -- JS ESLint config
+		"package.json", -- If eslint is defined in package.json
+		".git" -- Fallback to git root if no ESLint config is found
+	),
 })
 
 -- jsonls
