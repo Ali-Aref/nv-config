@@ -50,7 +50,7 @@ return {
 					light = "latte",
 					dark = "mocha",
 				},
-				transparent_background = true, -- disables setting the background color.
+				transparent_background = false, -- disables setting the background color.
 				show_end_of_buffer = true, -- shows the '~' characters after the end of buffers
 				term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
 				dim_inactive = {
@@ -112,11 +112,11 @@ return {
 				style = "warm", -- dark, darker, cool, deep, warm, warmer, light
 				transparent = true, -- Show/hide background
 				term_colors = true, -- Change terminal color as per the selected theme style
-				ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
-				cmp_itemkind_reverse = true, -- reverse item kind highlights in cmp menu
+				ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+				cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
 
 				-- toggle theme style ---
-				toggle_style_key = '<leader>cv', -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
+				-- toggle_style_key = '<leader>cv', -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
 				toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" }, -- List of styles to toggle between
 
 				-- Change code style ---
