@@ -16,7 +16,7 @@ return {
 					operators = false,
 					folds = true,
 				},
-				strikethrough = false,
+				strikethrough = true,
 				invert_selection = false,
 				invert_signs = false,
 				invert_tabline = false,
@@ -112,7 +112,7 @@ return {
 				style = "warm", -- dark, darker, cool, deep, warm, warmer, light
 				transparent = true, -- Show/hide background
 				term_colors = true, -- Change terminal color as per the selected theme style
-				ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+				ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
 				cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
 
 				-- toggle theme style ---
@@ -137,7 +137,12 @@ return {
 
 				-- Custom Highlights --
 				colors = {}, -- Override default colors
-				highlights = {}, -- Override highlight groups
+				highlights = {
+					NormalFloat = { bg = "none", fg = "$blue" },
+					FloatBorder = { bg = "none", fg = "$blue" },
+					LazyNormal = { bg = "none", fg = "$blue" },
+					MasonNormal = { bg = "none", fg = "$blue" },
+				}, -- Override highlight groups
 
 				-- Plugins Config --
 				diagnostics = {
