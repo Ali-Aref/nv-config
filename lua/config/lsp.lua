@@ -82,6 +82,12 @@ lspconfig.pylsp.setup({
 	capabilities = capabilities,
 })
 
+-- clang
+lspconfig.clangd.setup({
+	capabilities = capabilities,
+})
+
+
 lspconfig.emmet_language_server.setup({
 	capabilities = capabilities,
 	filetypes = {
